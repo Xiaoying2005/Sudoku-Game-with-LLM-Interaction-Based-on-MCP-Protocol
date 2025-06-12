@@ -35,7 +35,8 @@ sudoku_mcp_experiment/
 python sudoku_game.py
 You will see the Sudoku board and an input prompt. To fill the first row using LLM assistance, enter:
 fill row 1
-##💬 Example Interaction
+
+ Example Interaction
 Initial board:
 . 1 . . 3 . 4 . .
 . . . 7 4 5 . . .
