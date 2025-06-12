@@ -1,8 +1,5 @@
-<Modalities>
-</Modalities>
-<Modalities>
-</Modalities>
 from llm_assist import fill_row
+from config import OPENAI_API_KEY
 
 sudoku = [
     [0, 1, 0, 0, 3, 0, 4, 0, 0],
@@ -21,15 +18,15 @@ def display_board(board):
         print(" ".join(str(cell) if cell != 0 else "." for cell in row))
 
 def main():
-    print("初始数独：")
+    print("Initial Sudoku:")
     display_board(sudoku)
-    print("\n输入 `fill row x` 填写第 x 行（从1开始）")
-    command = input("输入命令: ")
+    print("\nEnter `fill row x` to fill row x (1-based index):")
+    command = input("Your command: ")
     if command.startswith("fill row"):
         row_num = int(command.split()[-1]) - 1
-        new_row = fill_row(row_num)
+        new_row = fill_row(row_num, sudoku[row_num])
         sudoku[row_num] = new_row
-        print("\n填写后的数独：")
+        print("\nSudoku after filling:")
         display_board(sudoku)
 
 if __name__ == "__main__":
