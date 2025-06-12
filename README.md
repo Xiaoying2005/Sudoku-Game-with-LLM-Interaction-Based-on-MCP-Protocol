@@ -28,6 +28,7 @@ fill row 1
 ```
 
 The model will complete the first row using actual reasoning.
+![image](https://github.com/user-attachments/assets/d93ff66b-fe20-492a-b11c-32f45d027b91)
 
 ## Files
 
